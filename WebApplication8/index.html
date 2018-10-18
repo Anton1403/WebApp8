@@ -6,6 +6,8 @@
 </head>
 <body>
 <div ng-controller="QuestionController">
+    <button ng-click="load()">Load</button>
+    <div class="content" ng-show="loaded"></div>
     <div class="quest">
         <h3>{{question.text}}</h3>
         <p>{{question.author}}</p>

@@ -1017,6 +1017,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Scripts\version.json" />
+    <Content Include="question.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
