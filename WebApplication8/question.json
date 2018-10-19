@@ -4,18 +4,18 @@
       {
         "text": "AngularJS!",
         "author": "Vova Sidorov",
-        "date": "20/10/2013",
+        "date": "25/10/2013",
         "rate": 2
       },
       {
-        "text": "AngularJS лучше всех",
-        "author": "Олег Кузнецов",
+        "text": "AngularJS the best",
+        "author": "Oleg Kuznicov",
         "date": "21/10/2013",
         "rate": 3
       }
     ],
-    "author": "Иван Иванов",
+    "author": "Ivan Ivanov",
     "date": "20/10/2013",
-    "text": "Какой js-фреймворк лучше использовать?"
+    "text": "Which Js-framework the best to use?"
   }
 }
