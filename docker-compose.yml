@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  webapplication8:
+    image: ${DOCKER_REGISTRY}webapplication8
+    build:
+      context: .\WebApplication8
+      dockerfile: Dockerfile

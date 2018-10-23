@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html ng-app="questApp">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<div ng-controller="AnswerController">
+    <form name="answerForm">
+        <fieldset>
+            <p>
+                <label for="answerText">Answer text: </label>
+                <input type="text" id="answerText" placeholder="Put your answer" required ng-model="answer.text" />
+            </p>
+            <p>
+                <label for="answerAuthor">Author text: </label>
+                <input type="text" id="answerAuthor" placeholder="Put your name" required ng-model="answer.author"/>
+            </p>
+        </fieldset>
+        <p><button type="submit" ng-click="save(answer, answerForm)">Save</button></p>
+    </form>
+    <div>Answer: </div>
+    <p ng-bind="answer.text"></p>
+    <p ng-bind="answer.author"></p>
+</div>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/AnswerController.js"></script>
+<body>
+
+</body>
+</html>

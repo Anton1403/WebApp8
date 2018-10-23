@@ -2,10 +2,10 @@
   "question": {
     "answers": [
       {
-        "text": "AngularJS!",
-        "author": "Vova Sidorovich",
+        "author": "Vova Sidorovici",
         "date": "25/10/2013",
-        "rate": 2
+        "rate": 2,
+        "text": "AngularJS!"
       },
       {
         "text": "AngularJS the best",
@@ -16,6 +16,6 @@
     ],
     "author": "Ivan Ivanov",
     "date": "20/10/2013",
-    "text": "Which Js-framework the best to use?"
+    "text": "Which Js-framework is the best to use?"
   }
 }
