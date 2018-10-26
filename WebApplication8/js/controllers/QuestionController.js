@@ -4,17 +4,12 @@
         $scope.loaded = false;
 
         $scope.load = function () {
-            var conf = {
-                timeout: 100
-            };
-            $http.get('question.json', conf).
+            $http.get('question.json').
                 then(function success(response) {
                         $scope.question = response.data.question;
                         $scope.loaded = true;
-                        console.log(response.config);
-                    }, function error(response) {
-                        console.log("Возникла ошибка");
-                        console.log("код ответа: " + response.status);
+                }, function error(response) {
+
                     }
                 );
         };

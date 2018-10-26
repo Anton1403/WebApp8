@@ -1,30 +1,35 @@
 ﻿<!DOCTYPE html>
-<html ng-app="questApp">
+<html ng-app="promApp">
 <head>
     <meta charset="utf-8" />
     <title></title>
 </head>
-<div ng-controller="AnswerController">
-    <form name="answerForm">
-        <fieldset>
-            <p>
-                <label for="answerText">Answer text: </label>
-                <input type="text" id="answerText" placeholder="Put your answer" required ng-model="answer.text" />
-            </p>
-            <p>
-                <label for="answerAuthor">Author text: </label>
-                <input type="text" id="answerAuthor" placeholder="Put your name" required ng-model="answer.author"/>
-            </p>
-        </fieldset>
-        <p><button type="submit" ng-click="save(answer, answerForm)">Save</button></p>
-    </form>
-    <div>Answer: </div>
-    <p ng-bind="answer.text"></p>
-    <p ng-bind="answer.author"></p>
+<div ng-controller="PromiseController">
+    <div class="content">
+        <div class="quest">
+            <h3>{{question.text}}</h3>
+            <p>{{question.author}}</p>
+            <b><i>{{question.date}}</i></b>
+        </div>
+        <h3>Answers:</h3>
+        <div class="answers">
+            <div ng-repeat="answer in question.answers | orderBy:sortparam" class="answer">
+                <div class="vote">
+                    <a class="vote-up" ng-click="voteUp(answer)"></a>
+                    <span class="rate">{{answer.rate}}</span>
+                    <a class="vote-down" ng-click="voteDown(answer)"></a>
+                </div>
+                <b>{{answer.text}}</b>
+                <p>{{answer.author}}</p>
+                <b><i>{{answer.date}}</i></b>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="js/lib/angular.min.js"></script>
 <script src="js/app.js"></script>
-<script src="js/controllers/AnswerController.js"></script>
+<script src="js/dataService.js"></script>
+<script src="js/controllers/PromiseController.js"></script>
 <body>
 
 </body>
