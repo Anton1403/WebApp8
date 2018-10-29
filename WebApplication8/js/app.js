@@ -1,2 +1,2 @@
-﻿var questApp = angular.module('questApp', []);
+﻿//var questApp = angular.module('questApp', []);
 var promApp = angular.module('promApp',[]);
