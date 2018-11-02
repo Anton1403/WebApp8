@@ -1,6 +1,12 @@
-﻿promApp.controller('PromiseController', function PromiseController($scope, dataService) {
-    var promiseObj = dataService.getData();
-    promiseObj.then(function(value) {
+﻿promApp.controller('PromiseController', function PromiseController($scope, dataService, $timeout) {
+
+    var promiseObj = $timeout(function() {
+            return dataService.getData();
+        },
+        3000);
+
+
+    promiseObj.then(function (value) {
         $scope.question = value;
     });
 
