@@ -13,14 +13,14 @@
 
 <script src="js/lib/angular.min.js"></script>
 <script>
-    var myApp = module.angular('myApp', []);
+    var myApp = angular.module('myApp', []);
     myApp.controller("DomController",
         function($scope, $window, $document) {
-            $scope.getAlert = function(text) {
+            $scope.getAlert = function (text) {
                 $window.alert(text);
             };
-            $document.find("button").on('click',
-                function(event) {
+            $document.find("button").on("click",
+                function (event) {
                     $window.alert(event.target.innerText);
                 });
         });
