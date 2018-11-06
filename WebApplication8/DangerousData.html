@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    
+<div ng-controller="helloController">
+    <textarea ng-model="htmlcode" rows="5"></textarea>
+    <p ng-bind-html="htmlcode"></p>
+</div>
+
+<script src="js/lib/angular.min.js"></script>
+<script src="Scripts/angular-sanitize.js"></script>
+<script>
+    var myApp = angular.module('myApp', ["ngSanitize"]);
+    myApp.controller('helloController',
+        function($scope, $sanitize) {
+            $scope.htmlcode = "<div> Жми <b> тут </b> </div>";
+            $scope.$watch("htmlcode",
+                function(newValue) {
+                    $scope.htmlcode = $sanitize(newValue);
+                });
+        });
+</script>
+</body>
+</html>
